@@ -1,6 +1,7 @@
 package org.group.entity;
 
 import java.sql.Date;
+import java.time.LocalDate;
 import java.util.Objects;
 
 public class Student {
@@ -8,9 +9,9 @@ public class Student {
     private String student_surname;
     private String student_first_name;
     private String student_last_name;
-    private Date birthday;
+    private LocalDate birthday;
 
-    public Student(Long student_id, String student_surname, String student_first_name, String student_last_name, Date birthday) {
+    public Student(Long student_id, String student_surname, String student_first_name, String student_last_name, LocalDate birthday) {
         this.student_id = student_id;
         this.student_surname = student_surname;
         this.student_first_name = student_first_name;
@@ -53,11 +54,11 @@ public class Student {
         this.student_last_name = student_last_name;
     }
 
-    public Date getBirthday() {
+    public LocalDate getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
     }
 

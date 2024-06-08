@@ -1,19 +1,22 @@
 package org.group.entity;
 
+import java.sql.Array;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class PracticGrade {
-    private Long practic_id;
-    private Integer practic_grade;
-    private Student student;
+    Long practic_id;
+    List<Integer> practic_grade = new ArrayList<>();
+    Student student;
 
     public PracticGrade() {
     }
 
-    public PracticGrade(Long practic_id, Student student, Integer practic_grade) {
+    public PracticGrade(Long practic_id, List<Integer> practic_grade, Student student) {
         this.practic_id = practic_id;
-        this.student = student;
         this.practic_grade = practic_grade;
+        this.student = student;
     }
 
     public Long getPractic_id() {
@@ -24,11 +27,11 @@ public class PracticGrade {
         this.practic_id = practic_id;
     }
 
-    public Integer getPractic_grade() {
+    public List<Integer> getPractic_grade() {
         return practic_grade;
     }
 
-    public void setPractic_grade(Integer practic_grade) {
+    public void setPractic_grade(List<Integer> practic_grade) {
         this.practic_grade = practic_grade;
     }
 
@@ -38,15 +41,6 @@ public class PracticGrade {
 
     public void setStudent(Student student) {
         this.student = student;
-    }
-
-    @Override
-    public String toString() {
-        return "PracticGrade{" +
-               "practic_id=" + practic_id +
-               ", practic_grade=" + practic_grade +
-               ", student=" + student +
-               '}';
     }
 
     @Override
@@ -60,5 +54,14 @@ public class PracticGrade {
     @Override
     public int hashCode() {
         return Objects.hash(practic_id, practic_grade, student);
+    }
+
+    @Override
+    public String toString() {
+        return "PracticGrade{" +
+                "practic_id=" + practic_id +
+                ", practic_grade=" + practic_grade +
+                ", student=" + student +
+                '}';
     }
 }

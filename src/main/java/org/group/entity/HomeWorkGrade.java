@@ -1,34 +1,36 @@
 package org.group.entity;
 
+import java.sql.Array;
+import java.util.List;
 import java.util.Objects;
 
 public class HomeWorkGrade {
-    private Long home_work_grade_id;
-    private Integer home_work_grade;
+    private int home_work_grade_id;
+    private List<Integer> home_work_grade;
     private Student student;
 
     public HomeWorkGrade() {
     }
 
-    public HomeWorkGrade(Long home_work_grade_id, Student student, Integer home_work_grade) {
+    public HomeWorkGrade(int home_work_grade_id, Student student, List<Integer> home_work_grade) {
         this.home_work_grade_id = home_work_grade_id;
         this.student = student;
         this.home_work_grade = home_work_grade;
     }
 
-    public Long getHome_work_grade_id() {
+    public int getHome_work_grade_id() {
         return home_work_grade_id;
     }
 
-    public void setHome_work_grade_id(Long home_work_grade_id) {
+    public void setHome_work_grade_id(Integer home_work_grade_id) {
         this.home_work_grade_id = home_work_grade_id;
     }
 
-    public Integer getHome_work_grade() {
-        return home_work_grade;
+    public List<Integer>getHome_work_grade() {
+            return home_work_grade;
     }
 
-    public void setHome_work_grade(Integer home_work_grade) {
+    public void setHome_work_grade(List<Integer> home_work_grade) {
         this.home_work_grade = home_work_grade;
     }
 
